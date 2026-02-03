@@ -70,11 +70,7 @@ class AttendanceManager:
             if t.get_username() == username and t.verify_password(password):
                 return t
         return None
-
-    def add_teacher(self, username, password, name):
-        if any(t.get_username() == username for t in self.teachers):
-            print(f"Teacher with username {username} already exists.")
-            return
+    
         teacher = Teacher(username, password, name)
         self.teachers.append(teacher)
         self.save_data()

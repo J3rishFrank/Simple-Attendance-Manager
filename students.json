@@ -1,31 +1,31 @@
 [
     {
-        "id": 1101,
+        "id": "1101",
         "name": "James",
         "class": "LVL 4 BM"
     },
     {
-        "id": 1102,
+        "id": "1102",
         "name": "Alya",
         "class": "LVL 5 BM"
     },
     {
-        "id": 1103,
+        "id": "1103",
         "name": "Masha",
         "class": "LVL 5 BM"
     },
     {
-        "id": 1104,
+        "id": "1104",
         "name": "Alistair",
         "class": "LVL 7 IT"
     },
     {
-        "id": 1105,
+        "id": "1105",
         "name": "Kuze",
         "class": "LVL 4 TH"
     },
     {
-        "id": 1106,
+        "id": "1106",
         "name": "Jean",
         "class": "LVL 7 TH"
     },
