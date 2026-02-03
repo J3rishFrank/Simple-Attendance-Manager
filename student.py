@@ -7,7 +7,7 @@ class Student(Individual):  # inherits from Individual (is-a Individual)
     def __init__(self, student_id, name, class_name):
         super().__init__(name)
         self._student_id = student_id   # Protected attribute
-        self._class_name = class_name
+        self._class_name = class_name   # Protected attribute
 
     def get_id(self):
         return self._student_id
