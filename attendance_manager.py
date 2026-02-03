@@ -70,11 +70,6 @@ class AttendanceManager:
             if t.get_username() == username and t.verify_password(password):
                 return t
         return None
-    
-        teacher = Teacher(username, password, name)
-        self.teachers.append(teacher)
-        self.save_data()
-        print(f"Teacher {name} added successfully.")
 
     # Student Methods
     # Adding a Student
