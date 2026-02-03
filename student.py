@@ -1,7 +1,7 @@
 from individual import Individual
 
 # Encapsulation: Student keeps its internal data (_student_id, _class_name) protected
-# and provides accessor methods (get_id, get_name, get_class_name) to read them.
+# and provides methods (get_id, get_name, get_class_name) to read them.
 # Inheritance: Student subclasses Individual to reuse the common interface.
 class Student(Individual):  # inherits from Individual (is-a Individual)
     def __init__(self, student_id, name, class_name):

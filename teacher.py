@@ -1,8 +1,7 @@
 from individual import Individual
 
-# Inheritance & Encapsulation: Teacher extends Individual and encapsulates credentials.
-# The password is stored internally and accessed via verify_password().
-class Teacher(Individual):  # inherits from Individual (is-a Individual)
+# Inheritance: Teacher extends Individual and encapsulates credentials.
+class Teacher(Individual):  # Inherits from Individual
     def __init__(self, username, password, name):
         super().__init__(name)
         self.username = username

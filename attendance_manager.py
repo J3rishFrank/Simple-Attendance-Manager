@@ -17,14 +17,13 @@ class AttendanceManager:
         self.teachers = []
         self.load_data()
 
-    # Abstraction
     def load_data(self):
         students_data = self.file_storage.load_data('students.json')
         attendance_data = self.file_storage.load_data('attendance_records.json')
         teachers_data = self.file_storage.load_data('teachers.json')
 
         for s in students_data:
-            # Instantiate Student (inherits from Individual)
+            # Inherits from Individual
             student = Student(s['id'], s['name'], s['class'])
             self.students.append(student)
 
@@ -33,13 +32,13 @@ class AttendanceManager:
             self.attendance_records.append(record)
 
         for t in teachers_data:
-            # Instantiate Teacher (inherits from Individual)
+            # Inherits from Individual
             teacher = Teacher(t.get('username'), t.get('password'), t.get('name'))
             self.teachers.append(teacher)
 
-        # Ensure at least one teacher exists
+        # Ensures at least one teacher exists
         if not self.teachers:
-            # Create default Teacher (inherits from Individual)
+            # Creates default Teacher
             default = Teacher('admin', 'admin123', 'Administrator')
             self.teachers.append(default)
             self.save_data()
@@ -74,7 +73,7 @@ class AttendanceManager:
     # Student Methods
     # Adding a Student
     def add_student(self, student_id, name, class_name):
-        # Normalize inputs for robust comparison: IDs as strings, names/classes stripped and lowercase
+        # Normalize inputs for comparison: IDs as strings, names/classes stripped and lowercase
         sid_str = str(student_id).strip()
         name_norm = str(name).strip().lower()
         class_norm = str(class_name).strip().lower()
@@ -84,7 +83,7 @@ class AttendanceManager:
             print(f"A student with ID {student_id} already exists.")
             return
 
-        # prevent duplicate name+class pair (case-insensitive, trimmed)
+        # prevent duplicate name+class pair (case-insensitive)
         if any(s.get_name().strip().lower() == name_norm and s.get_class_name().strip().lower() == class_norm for s in self.students):
             print(f"A student with name '{name}' in class '{class_name}' already exists.")
             return
@@ -114,7 +113,7 @@ class AttendanceManager:
     # Mark Attendance
     def mark_attendance(self, student_id, status):
         sid_str = str(student_id).strip()
-        # Validate student exists
+        # Validate that student exists
         if not any(str(s.get_id()).strip() == sid_str for s in self.students):
             print(f"No student with ID {student_id} found.")
             return

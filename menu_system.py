@@ -12,7 +12,6 @@ class MenuSystem:
             password = input("Password: ")
 
             teacher = self.manager.authenticate(username, password)
-            # teacher is a Teacher instance (inherits from Individual)
             if teacher:
                 print(f"Welcome, {teacher._name}!")
                 return True
@@ -46,7 +45,7 @@ class MenuSystem:
                 print("Invalid choice. Please enter 1 or 2.")
 
     def main_menu(self):
-        # Main application menu (requires a logged-in teacher)
+        # Main menu (requires a logged-in teacher)
         while True:
             print("\n|=======================================================================================================|")
             print("|---------------------------------------------  MAIN MENU  ---------------------------------------------|")
@@ -72,6 +71,7 @@ class MenuSystem:
                 print("Invalid choice. Please enter 1, 2, or 3.")
 
     def student_menu(self):
+        # Student Menu
         while True:
             print("\n|=========================================================================================================|")
             print("|--------------------------------------------  STUDENT MENU  ---------------------------------------------|")
@@ -110,6 +110,7 @@ class MenuSystem:
                 print("Invalid choice. Please enter 1, 2, 3, or 4.")
 
     def attendance_menu(self):
+        # Attendance Menu
         while True:
             print("\n|=========================================================================================================|")
             print("|-------------------------------------------  ATTENDANCE MENU  -------------------------------------------|")

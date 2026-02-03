@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 
-# Inheritance: Individual is an abstract base class that provides a common interface
-# for different types of individuals (e.g., Student and Teacher). Subclasses inherit
-# shared attributes/behavior from Individual.
+# Abstraction & Inheritance: Individual is an abstract base class that provides a common interface
+# Subclasses inherit shared attributes/behavior from Individual.
 class Individual(ABC):
     def __init__(self, name):
         self._name = name  # Protected attribute (supports encapsulation in subclasses)

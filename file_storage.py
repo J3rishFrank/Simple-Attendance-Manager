@@ -1,7 +1,7 @@
 import json
 import os
 
-# Abstraction: FileStorage encapsulates file I/O and JSON serialization so
+# FileStorage saves the data to JSON files and loads it back, so that
 # higher-level components do not need to manage file details directly.
 class FileStorage:
     """Simple file-based storage for JSON data."""
