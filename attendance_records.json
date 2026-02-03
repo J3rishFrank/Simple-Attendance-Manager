@@ -23,10 +23,5 @@
         "student_id": "1105",
         "date": "2026-01-31",
         "status": "Absent"
-    },
-    {
-        "student_id": "1106",
-        "date": "2026-01-31",
-        "status": "Absent"
     }
 ]
